@@ -1,0 +1,226 @@
+﻿A {
+     text-decoration: none !important;
+} 
+A:hover {
+     cursor: pointer;
+     text-decoration: none !important;
+} 
+
+.qtip {
+    color: white !important;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #334e67), color-stop(1, #161F29) );
+    background: -moz-linear-gradient( center top, #334e67 5%, #161F29 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#334e67', endColorstr='#161F29');
+    background-color: #334e67;
+    font-size: 12px;
+    border:  1px solid #18bc9c;
+}
+
+#main-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    padding: 60px 0 0px 0;
+}
+
+
+.qtip-content h3 {
+    color: #18bc9c;
+}
+
+.navbar {
+    min-height: 50px;
+}
+
+.navbar-brand {
+    height: 50px;
+}
+
+.nav-list li.active {
+    color: #ffffff;
+    background-color:lightblue;
+}
+
+.nav-list a.active {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+
+.searchTable tr:hover {
+    background-color: #ecf0f1;
+    color: #18bc9c;
+    cursor: pointer;
+}
+
+
+#wrapper {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: inline-block;
+}
+
+
+.datagrid {
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #161F29;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    .datagrid table {
+        border-collapse: collapse;
+        text-align: left;
+        width: 100%;
+    }
+
+    .datagrid table td, .datagrid table th {
+        padding: 2px 5px;
+    }
+
+    .datagrid table thead th {
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #334e67), color-stop(1, #161F29) );
+        background: -moz-linear-gradient( center top, #334e67 5%, #161F29 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#334e67', endColorstr='#161F29');
+        background-color: #334e67;
+        color: #18BC9C;
+        font-size: 12px;
+        font-weight: normal;
+        border-left: 1px solid #161F29;
+    }
+
+        .datagrid table thead th:first-child {
+            border: none;
+        }
+
+    
+
+    .datagrid table tbody td {
+        color: #18BC9C;
+        border-left: 1px solid #161F29;
+        font-size: 12px;
+        border-bottom: 1px solid #1E2A36;
+        font-weight: normal;
+    }
+
+    .datagrid table tbody .alt td {
+        background: #EBEEFC;
+        color: #00557F;
+    }
+
+    .datagrid table tbody tr:hover td{
+        background: #18BC9C;
+        color: white;
+        cursor: pointer;
+    }
+
+
+    .datagrid table tbody td:first-child {
+        border-left: none;
+    }
+
+    .datagrid table tfoot td {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+
+
+.twoColumnTable {
+    text-align: left;
+    border-collapse: collapse;
+    background-color: white;
+    color: #18BC9C;
+}
+
+    .twoColumnTable td:first-child{
+        vertical-align: text-top;
+        padding: 4px 2px 0px 4px;
+        border-right: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .twoColumnTable td:last-child{
+        vertical-align: text-top;
+        padding: 4px 2px 0px 4px;
+        border-bottom: 1px solid lightgray;
+    }
+
+
+.css-treeview ul {
+    padding-left: 15px;
+    list-style-type: none;
+     font-size: 14px
+}
+.spanTreeViewSelected {
+    color: #18bc9c;
+    font-weight: bold;
+    font-size: 14px
+}
+
+
+
+.fixedMenuRight {
+    margin: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: table;
+    margin: 0;
+    position: fixed;
+    right: 15px;
+    top: 95px !important;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: transparent;
+}
+
+.fixedMenuRightWell {
+    margin: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: table;
+    position: fixed;
+    height:30px;
+    right: 15px;
+    top: 100px !important;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: transparent;
+}
+
+
+.nonFixedMenu {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: transparent;
+}
+
+
+
+.borderBottomHr {
+    border-bottom-style: solid; 
+    border-bottom-color: #808080;; 
+    border-bottom-width: 1px;
+}
+
+.viewContent {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

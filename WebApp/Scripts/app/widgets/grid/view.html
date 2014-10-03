@@ -1,0 +1,103 @@
+<div data-part="header-templates"></div>
+<div data-part="cell-templates"></div>
+
+<div data-bind="if: showSearchBox" data-part="search">
+    <table style="width:300px">
+        <tfoot data-part="footer">
+            <tr class="grid-search">
+                <td class="grid-footer">
+                    <div class="input-group input-group-sm" >
+                        <input type="text" class="form-control input-sm" data-bind="value: query, valueUpdate: 'keyup', placeholder: searchText">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary btn-sm" type="button" data-bind="click: clearFilter">
+                                <i class="fa fa-eraser"></i>
+                            </button>
+                        </span>
+                    </div><!-- /input-group -->
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr class="hrSmallMargin" />
+</div>
+
+<table data-bind="css: gridClasses">
+    <thead class="grid-columns" data-part="header">
+        <tr class="grid-column" data-part="headerRow" data-bind="foreach: columns">
+
+            <!-- ko ifnot: $parent.getUserHeaderTemplate($data) -->
+            <th class="grid-header-cell" data-bind="click: $parent.setSortColumn,
+													attr: { style: $parent.getUserHeaderTemplateStyle($data), class: $parent.getUserHeaderTemplateClass($data) }">
+                <span data-bind="text: header"></span>
+                <!-- ko if: $data == $parent.sortColumn() -->
+                <i class="fa fa-sort-desc" data-bind="css: { 'fa-sort-desc': $parent.sortDesc(), 'fa-sort-asc': !$parent.sortDesc() }"></i>
+                <!-- /ko -->
+            </th>
+            <!-- /ko -->
+            <!-- ko if: $parent.getUserHeaderTemplate($data) -->
+            <th data-bind="click: $parent.setSortColumn,
+						   template: { name: $parent.getUserHeaderTemplate($data), data: { model: $parent.getModel(), data: $data.header, column: $data, grid: $parent } },
+						   attr: { style: $parent.getUserHeaderTemplateStyle($data), class: $parent.getUserHeaderTemplateClass($data) }"></th>
+            <!-- /ko -->
+        </tr>
+    </thead>
+    <tbody class="grid-body" data-bind="foreach: { data: rows, as: 'row' }" data-part="body">
+        <tr data-bind="foreach: $parent.columns,  click: $parent.rowClick, doubleClick: $parent.rowDoubleClick, css: { 'alt': $index() % 2 == 0, 'rowActive' : $parent.rowSelected($data) }">
+            <!-- ko ifnot: $parents[1].getUserCellTemplate($data) -->
+            <td data-bind="text: $parents[1].getColumnText($data, row),
+						   attr: { style: $parents[1].getUserCellTemplateStyle($data), class: $parents[1].getUserCellTemplateClass($data)}"></td>
+            <!-- /ko -->
+            <!-- ko if: $parents[1].getUserCellTemplate($data) -->
+            <td data-bind="template: { name: $parents[1].getUserCellTemplate($data), data: { model: $parents[1].getModel(), data: $parents[1].getColumnText($data, row), row: row, grid: $parents[1] } },
+						   attr: { style: $parents[1].getUserCellTemplateStyle($data), class: $parents[1].getUserCellTemplateClass($data) }"></td>
+            <!-- /ko -->
+        </tr>
+    </tbody>
+
+
+
+</table>
+
+<div data-bind="if: showPaging">
+    <hr class="hrSmallBottomMargin" />
+    <table data-part="pagingRow" style="width: 100%">
+        <tfoot data-part="footer">
+            <tr>
+                <td class="grid-footer">
+                    <div class="grid-page-container">
+                        <button class="btn btn-sm btn-primary" data-bind="click: pageToFirst, enable: canPageBackward"><i class="fa fa-step-backward"></i></button>
+                        <button class="btn btn-sm btn-primary" data-bind="click: pageBackward, enable: canPageBackward"><i class="fa fa-play fa-rotate-180"></i></button>
+                        <span data-bind="text: pageText"></span> <span data-bind="text: currentPageNumber"></span>
+                        <span data-bind="text: ofText"></span> <span data-bind="text: pageCount"></span>
+                        <!-- ko if: showRowCountOptions -->
+                        <span> [</span>
+                        <span data-bind="text: rowsText" style="font-style: italic"></span> <span data-bind="text: currentRows" style="font-style: italic"></span>
+                        <span data-bind="text: ofText" style="font-style: italic"></span> <span data-bind="text: totalRows" style="font-style: italic"></span>
+                        <span>] </span>
+                        <!-- /ko -->
+                        <button class="btn btn-sm btn-primary" data-bind="click: pageForward, enable: canPageForward"><i class="fa fa-play"></i></button>
+                        <button class="btn btn-sm btn-primary" data-bind="click: pageToLast, enable: canPageForward"><i class="fa fa-step-forward"></i></button>
+                    </div>
+                </td>
+                <!-- ko if: showPageSizeOptions -->
+                <td style="text-align: right">
+                    <span data-bind="text: pageSizeText"></span>:
+
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                            <span data-bind="text: pageSize"></span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu" style="max-width: 50px;">
+                            <!-- ko foreach: pageSizeOptions -->
+                            <li><a data-bind="text: $data, click: $parent.pageSize" class="text-center"></a></li>
+                            <!-- /ko -->
+                        </ul>
+                    </div>
+                </td>
+                <!-- /ko -->
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+

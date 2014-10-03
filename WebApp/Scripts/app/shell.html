@@ -1,0 +1,60 @@
+﻿<div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <i class="fa fa-home"></i>
+                <span>My App Name</span>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" data-bind="foreach: router.navigationModel">
+                <!--ko if: subRoute().length == 0-->
+                <li data-bind="css: { active: isActive }">
+                    <a data-bind="attr: { href: hash }, text: title"></a>
+                </li>
+                <!--/ko-->
+                <!--ko ifnot: subRoute().length == 0-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                        <span data-bind="text:title"></span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" data-bind="foreach: subRoute">
+                        <li>
+                            <a data-bind="attr: { href: hash }, text: title" style="cursor: pointer"></a>
+                        </li>
+
+                    </ul>
+                </li>
+                <!--/ko-->
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="loader" data-bind="css: { active: isBusy}">
+                    <i class="fa fa-spinner fa-spin fa-2x"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" data-bind="router: { view: 'listing', cacheViews:true }"></div>
+
+    <div id="notification-wrapper-right">
+        <div data-bind="compose: hasNotifications()"></div>
+    </div>
+    <div id="notification-wrapper-left">
+        Copyright © <span data-bind="text: currentYear"></span> BCC Services d.o.o.
+    </div>
+    <form id="downloadForm" action="" target="_blank" method="post">
+        <input type="hidden" name="downloadData" id="downloadData" />
+    </form>
+
+
+</div>

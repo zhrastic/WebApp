@@ -1,0 +1,26 @@
+﻿<div class="page-content">
+    <h1 data-bind="text:naslov"></h1>
+    <hr />
+
+    <span style="font-weight: bold">Ugrađeno u template:</span>
+    <ul data-bind="foreach: features">
+        <li>
+            <span data-bind="html: $data"></span>
+        </li>
+    </ul>
+
+    <b>Web API</b><hr/>
+    <div>
+        <button data-bind="click: apiCall" type="button" class="btn btn-default btn-sm">Web api call</button>
+        <span data-bind="visible: !serverTimeLoading(), text:serverTime"></span>
+        <span data-bind="visible: serverTimeLoading">
+            Učitavam...
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>  
+    </div>
+    <br/>
+    <div>
+        <button data-bind="click: apiCallWithErrorResponse" type="button" class="btn btn-default btn-sm">Web api call with error</button>
+    </div>
+   
+</div>

@@ -1,0 +1,203 @@
+﻿A {
+     text-decoration: none !important;
+} 
+A:hover {
+     cursor: pointer;
+     text-decoration: none !important;
+} 
+
+.qtip {
+    color: white !important;
+    background-color: rgb(43, 62, 80);
+    font-size: 12px;
+    border:  1px solid #df691a;
+}
+
+.qtip-content h3 {
+    color: #df691a;
+}
+
+
+.nav-list li.active {
+    color: #ffffff;
+    background-color:dimgray;
+}
+
+.nav-list a.active {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.searchTable tr:hover {
+    background-color: dimgray;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+.datagrid {
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #df691a;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    .datagrid table {
+        border-collapse: collapse;
+        text-align: left;
+        width: 100%;
+    }
+
+
+    .datagrid table td, .datagrid table th {
+        padding: 2px 5px;
+    }
+
+    .datagrid table thead th {
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #df691a), color-stop(1, #d59265) );
+        background: -moz-linear-gradient( center top, #df691a 5%, #d59265 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#df691a', endColorstr='#d59265');
+        background-color: #df691a;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: normal;
+        border-left: 1px solid #d59265;
+    }
+
+        .datagrid table thead th:first-child {
+            border: none;
+        }
+
+    
+
+    .datagrid table tbody td {
+        color: #00557F;
+        border-left: 1px solid #BFCEDB;
+        font-size: 12px;
+        border-bottom: 1px solid #6D94BF;
+        font-weight: normal;
+    }
+
+    .datagrid table tbody .alt td {
+        background: rgb(43, 62, 80);
+        color: white;
+    }
+
+    .datagrid table tbody tr:hover td{
+        background: #6D94BF;
+        color: white;
+        cursor: pointer;
+    }
+
+
+    .datagrid table tbody td:first-child {
+        border-left: none;
+    }
+
+    .datagrid table tfoot td {
+        color: rgb(10, 69, 99);
+        padding-left: 10px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+
+.twoColumnTable {
+    text-align: left;
+    border-collapse: collapse;
+    background-color: white;
+    color: #00557F;
+}
+
+    .twoColumnTable td:first-child{
+        vertical-align: text-top;
+        padding: 4px 2px 0px 4px;
+        border-right: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .twoColumnTable td:last-child{
+        vertical-align: text-top;
+        padding: 4px 2px 0px 4px;
+        border-bottom: 1px solid lightgray;
+    }
+
+
+.spanTreeViewSelected {
+    color: #df691a;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.fixedMenuRight {
+    margin: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: table;
+    margin: 0;
+    position: fixed;
+    right: 15px;
+    top: 80px !important;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: transparent;
+}
+
+.fixedMenuRightWell {
+    margin: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: table;
+    position: fixed;
+    height:30px;
+    right: 15px;
+    top: 90px !important;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: transparent;
+}
+
+.nonFixedMenu {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: transparent;
+}
+
+
+
+.borderBottomHr {
+    border-bottom-style: solid; 
+    border-bottom-color: #4e5d6c;; 
+    border-bottom-width: 1px;
+}
+
+
+.viewContent {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #2b3e50;
+    border-left-color: #2b3e50;;
+    border-right-color: #2b3e50;
+    border-bottom-color: transparent;
+}

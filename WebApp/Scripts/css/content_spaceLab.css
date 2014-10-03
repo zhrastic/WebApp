@@ -1,0 +1,248 @@
+﻿/*
+.navbar
+{
+    background-image: url('../images/old_mathematics.png');
+    background-repeat: repeat-x; 
+}
+*/
+
+body {
+    background-image: url('../images/pattern-subtle-dots.png');
+    background-repeat: repeat;
+}
+
+
+A {
+     text-decoration: none !important;
+} 
+A:hover {
+     cursor: pointer;
+     text-decoration: none !important;
+} 
+
+div.well {
+    background-image: url('../images/pattern-subtle-dots.png');
+    background-repeat: repeat; 
+}
+
+div.panel {
+    background-image: url('../images/pattern-subtle-dots.png');
+    background-repeat: repeat; 
+}
+
+.disabledLabel {
+    color: lightgrey;
+    cursor: not-allowed;
+}
+
+.qtip {
+    color: white !important;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #6D94BF), color-stop(1, #3E648D) );
+    background: -moz-linear-gradient( center top, #6D94BF 5%, #3E648D 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6D94BF', endColorstr='#3E648D');
+    background-color: #6D94BF;
+    font-size: 12px;
+    border:  1px solid #006699;
+}
+
+.qtip-content h3 {
+    color: white !important;
+}
+
+
+.nav-list li.active {
+    color: #ffffff;
+    background-color:#dddddd;
+}
+
+.nav-list a.active {
+    color: #777777;;
+    font-weight: bold;
+}
+
+
+.searchTable tr:hover {
+    background: #EBEEFC;
+    color: #00557F;
+    cursor: pointer;
+}
+
+.searchTable .alt tr:hover {
+    background-color: #00557F;
+    color: #3399f3;
+    cursor: pointer;
+}
+
+.rowActive {
+    color: #00557F;
+    font-weight: bold;
+}
+
+
+.datagrid {
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #006699;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    .datagrid table {
+        border-collapse: collapse;
+        text-align: left;
+        width: 100%;
+    }
+
+    .datagrid table td, .datagrid table th {
+        padding: 2px 5px;
+    }
+
+    .datagrid table thead th {
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #6D94BF), color-stop(1, #3E648D) );
+        background: -moz-linear-gradient( center top, #6D94BF 5%, #3E648D 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6D94BF', endColorstr='#3E648D');
+        background-color: #6D94BF;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: normal;
+        border-left: 1px solid #0070A8;
+    }
+
+        .datagrid table thead th:first-child {
+            border: none;
+        }
+
+    
+
+    .datagrid table tbody td {
+        color: #00557F;
+        border-left: 1px solid #BFCEDB;
+        font-size: 12px;
+        border-bottom: 1px solid #6D94BF;
+        font-weight: normal;
+    }
+
+    .datagrid table tbody .alt td {
+        background: #EBEEFC;
+        color: #00557F;
+    }
+
+    .datagrid table tbody tr:hover td{
+        background: #6D94BF;
+        color: white;
+        cursor: pointer;
+    }
+
+
+    .datagrid table tbody td:first-child {
+        border-left: none;
+    }
+
+    .datagrid table tfoot td {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+
+
+.twoColumnTable {
+    text-align: left;
+    border-collapse: collapse;
+    background-color: white;
+    color: #00557F;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    .twoColumnTable td:first-child{
+        vertical-align: text-top;
+        padding: 4px 2px 0px 4px;
+        border-right: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .twoColumnTable td:last-child{
+        vertical-align: text-top;
+        padding: 4px 2px 0px 4px;
+        border-bottom: 1px solid lightgray;
+    }
+
+
+.css-treeview ul {
+    padding-left: 15px;
+    list-style-type: none;
+     font-size: 14px
+}
+.spanTreeViewSelected {
+    color: #3399f3;
+    font-weight: bold;
+    font-size: 14px
+}
+
+
+
+.borderBottomHr {
+    border-bottom-style: solid; 
+    border-bottom-color: #dddddd; 
+    border-bottom-width: 1px;
+}
+
+.fixedMenuRight {
+    margin: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: table;
+    margin: 0;
+    position: fixed;
+    right: 15px;
+    top: 80px !important;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: transparent;
+}
+
+.fixedMenuRightWell {
+    margin: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: table;
+    position: fixed;
+    height:30px;
+    right: 15px;
+    top: 90px !important;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: transparent;
+}
+
+
+.nonFixedMenu {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: transparent;
+}
+
+
+.css-treeview ul {
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+.viewContent {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

@@ -1,0 +1,33 @@
+<script data-part="node-header-template" type="text/html">
+	<label>
+		<input type="checkbox" data-bind="checked: node.expanded, disable: node.disabled" />
+		<span data-bind="text: node.text, click: function() { treeview.select(node); }"></span>
+	</label>
+</script>
+
+<script data-part="node-container-template" type="text/html">
+	<li data-bind="css: { 'selected': treeview.isSelected(node) }">
+
+		<!-- ko template : { name: treeview.nodeHeaderTemplate } -->
+		<!-- /ko -->
+	
+		<!-- ko if: node.expanded() -->
+			<!-- ko template : { if: node.nodes().length > 0, afterRender: treeview.slide } -->
+				<ul class="slideup" data-bind="foreach: node.nodes">
+					<!-- ko template: { name: $parent.treeview.nodeCotainerTemplate, data: { treeview: $parent.treeview, node: $data, model: $parent.treeview.model } } -->
+					<!-- /ko -->
+				</ul>
+			<!-- /ko -->
+		<!-- /ko -->
+	</li>
+</script>
+
+
+
+
+<div class="css-treeview" data-part="treeview-container">
+    <ul data-bind="foreach: nodes">
+		<!-- ko template: { name: $parent.nodeCotainerTemplate, data: { treeview: $parent, node: $data, model: $parent.model } } -->
+		<!-- /ko -->
+	</ul>
+</div>

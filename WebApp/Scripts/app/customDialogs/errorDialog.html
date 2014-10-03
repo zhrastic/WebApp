@@ -1,0 +1,21 @@
+﻿<div class="panel panel-danger messagebox" style="width:500px">
+    <div class="panel-heading" style="cursor:move">
+        <div class="row">
+            <div class="col-md-11">
+                <h4 class="panel-title">
+                    <i class="fa fa-frown-o"></i> <span data-bind="text: dialogTitle"></span>
+                </h4>
+            </div>
+            <div class="col-md-1" style="text-align:right; cursor: pointer">
+                <i class="fa fa-times" data-bind="click: close"></i>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div data-bind="html:errorMessage" style="max-height: 250px; max-width: 460px; overflow-x:hidden; overflow-y: auto"></div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bind="click: close, text: resource('Close')"></button>
+        <div style="clear:both;"></div>
+    </div>
+</div>

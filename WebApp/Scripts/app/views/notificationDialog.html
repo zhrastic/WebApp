@@ -1,0 +1,23 @@
+﻿<div class="panel panel-info" style="width:400px;">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-9">
+                <h4 class="panel-title">
+                    <i class="fa fa-bars"></i> <span>Info</span> <span class="badge" data-bind="text: notifications().length"></span>
+                </h4>
+            </div>
+            <div class="col-md-3" style="cursor: pointer; text-align: right">
+                <div class="btn-toolbar pull-right">
+                    <div class="btn-group">
+                        <i class="fa fa-trash-o" data-bind="click: closeAllNotifier" title="Close all notice"></i>
+                        <i class="fa fa-times" data-bind="click: closeNotifier" title="Close this notice"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <pre data-bind="html: currentNotification()"></pre>
+    </div>
+</div>
