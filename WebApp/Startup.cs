@@ -4,15 +4,39 @@ using Microsoft.Owin;
 using Owin;
 using Microsoft.AspNet.SignalR;
 using Microsoft.Owin.Cors;
-
-[assembly: OwinStartup(typeof(WebApp.Startup))]
+using System.Web.Http;
+using System.Net.Http.Formatting;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;[assembly: OwinStartup(typeof(WebApp.Startup))]
 
 namespace WebApp
 {
     public class Startup
     {
+
         public void Configuration(IAppBuilder app)
         {
+
+            var httpConfiguration = new HttpConfiguration();
+
+            httpConfiguration.Formatters.Clear();
+            httpConfiguration.Formatters.Add(new JsonMediaTypeFormatter());
+            httpConfiguration.Formatters.JsonFormatter.SerializerSettings =
+                new JsonSerializerSettings
+                {
+                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                };
+
+            // Attribute routing.
+            httpConfiguration.MapHttpAttributeRoutes();
+            httpConfiguration.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional });
+
+            app.UseWebApi(httpConfiguration); 
+
+
             // Any connection or hub wire up and configuration should go here
             // Branch the pipeline here for requests that start with "/signalr"
             app.Map("/signalr", map =>
@@ -33,6 +57,10 @@ namespace WebApp
                 // since this branch already runs under the "/signalr"
                 // path.
                 map.RunSignalR(hubConfiguration);
+
+                
+
+
             });
         }
     }
