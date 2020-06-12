@@ -7,4 +7,4 @@ Novo 1
 
 Sa GIT-a
 Sa git-a 2
-
+Iz VS-a
