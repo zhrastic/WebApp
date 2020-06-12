@@ -27,8 +27,7 @@ namespace WebApp
                     ContractResolver = new CamelCasePropertyNamesContractResolver()
                 };
 
-            // Attribute routing. Route
-            // Attribute routing. Pero
+            // Attribute routing. Route. Pero
             httpConfiguration.MapHttpAttributeRoutes();
             httpConfiguration.Routes.MapHttpRoute(
                 name: "DefaultApi",
