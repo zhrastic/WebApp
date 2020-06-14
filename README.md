@@ -10,3 +10,5 @@ Sa GIT-a
 Sa git-a 2
 
 Iz VS-a
+
+Iz VC Code, od doma
